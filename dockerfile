@@ -1,6 +1,5 @@
 FROM python:3.11-slim
 
-# التعديل هنا: استخدمنا المكتبات المتوافقة مع التوزيعة الجديدة لـ OpenCV
 RUN apt-get update && apt-get install -y \
     libgl1 \
     libglib2.0-0 \

@@ -4,12 +4,11 @@ import numpy as np
 from ultralytics import YOLO
 import time
 
-TELEGRAM_TOKEN = "8949424119:AAEIuo1bYrMUE7ohqdrdharpU-3MhDPk59Y"
-CHAT_ID = "8556427970"
+TELEGRAM_TOKEN = "Bot_token"
+CHAT_ID = "your_ID"
 
-# متغيرات للتحكم في وقت إرسال الرسائل (مثلاً يبعت رسالة كل 10 ثواني كحد أقصى لو العربية لسه واقفة)
 last_alert_time = 0
-alert_cooldown = 10  # بالثواني
+alert_cooldown = 2
 
 def send_telegram_message(text):
     url = f"https://api.telegram.org/bot{TELEGRAM_TOKEN}/sendMessage"
