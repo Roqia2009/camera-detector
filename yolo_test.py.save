@@ -1,0 +1,21 @@
+from ultralytics import YOLO
+
+# تحميل نموذج YOLO11
+model = YOLO("yolo11n.pt")
+
+# تشغيل البث المباشر من الكاميرا الافتراضية
+# show=True لفتح نافذة البث، stream=True لجعل الفيديو سلس وخفيف على الجهاز
+results = model.predict(source="0", show=True, stream=True)
+
+# هذا السطر مهم ليستمر البرنامج في عرض الكاميرا إطار بإطار
+for r in results:
+    passfrom ultralytics import YOLO
+
+# This will automatically download the file if you do not have it
+model = YOLO("yolo11n.pt")
+
+# Make sure you have a real file named 'image.jpg' in the same folder
+results = model("image.jpg")
+
+# This opens a window to show the detection results
+results[0].show()
